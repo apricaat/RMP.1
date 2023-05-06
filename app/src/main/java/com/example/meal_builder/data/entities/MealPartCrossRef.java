@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 
-import com.google.android.material.circularreveal.CircularRevealHelper;
+import com.example.meal_builder.data.user_sources.UserMeal;
 
 @Entity(
         tableName = "user_meal_parts",

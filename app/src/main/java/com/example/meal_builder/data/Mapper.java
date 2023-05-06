@@ -2,7 +2,7 @@ package com.example.meal_builder.data;
 
 import com.example.meal_builder.data.entities.MealPart;
 import com.example.meal_builder.data.entities.MealPartCrossRef;
-import com.example.meal_builder.data.entities.UserMealWithParts;
+import com.example.meal_builder.data.user_sources.UserMealWithParts;
 import com.example.meal_builder.data.model.ChoosableMealPart;
 import com.example.meal_builder.data.model.UserMeal;
 
@@ -39,7 +39,7 @@ public class Mapper {
         return userMealWithPartsList.stream().map(Mapper::adaptUserMealToClient).collect(Collectors.toList());
     }
 
-    public static com.example.meal_builder.data.entities.UserMeal adaptUserMealToDB(UserMeal o) {
-        return new com.example.meal_builder.data.entities.UserMeal((long) o.id, o.name, o.image);
+    public static com.example.meal_builder.data.user_sources.UserMeal adaptUserMealToDB(UserMeal o) {
+        return new com.example.meal_builder.data.user_sources.UserMeal((long) o.id, o.name, o.image);
     }
 }

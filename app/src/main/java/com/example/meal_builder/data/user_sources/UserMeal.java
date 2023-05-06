@@ -1,4 +1,4 @@
-package com.example.meal_builder.data.entities;
+package com.example.meal_builder.data.user_sources;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

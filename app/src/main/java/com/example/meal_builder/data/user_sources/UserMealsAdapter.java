@@ -1,8 +1,6 @@
-package com.example.meal_builder.ui.adapters;
+package com.example.meal_builder.data.user_sources;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

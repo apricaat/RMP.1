@@ -1,9 +1,11 @@
-package com.example.meal_builder.data.entities;
+package com.example.meal_builder.data.user_sources;
 
 import androidx.room.Embedded;
-import androidx.room.Entity;
 import androidx.room.Junction;
 import androidx.room.Relation;
+
+import com.example.meal_builder.data.entities.MealPartCrossRef;
+import com.example.meal_builder.data.user_sources.UserMeal;
 
 import java.util.List;
 

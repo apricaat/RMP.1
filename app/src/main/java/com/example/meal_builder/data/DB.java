@@ -1,8 +1,6 @@
 package com.example.meal_builder.data;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
@@ -14,16 +12,12 @@ import com.example.meal_builder.data.data_sources.MealPartDAO;
 import com.example.meal_builder.data.data_sources.UserMealDAO;
 import com.example.meal_builder.data.entities.MealPart;
 import com.example.meal_builder.data.entities.MealPartCrossRef;
-import com.example.meal_builder.data.entities.UserMeal;
-import com.example.meal_builder.data.entities.UserMealWithParts;
-import com.example.meal_builder.data.model.ChoosableMealPart;
+import com.example.meal_builder.data.user_sources.UserMeal;
 import com.example.meal_builder.domain.Util;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadLocalRandom;
 
 @Database(entities = {MealPart.class, MealPartCrossRef.class, UserMeal.class}, version = 3, exportSchema = false)
 public abstract class DB extends RoomDatabase {
