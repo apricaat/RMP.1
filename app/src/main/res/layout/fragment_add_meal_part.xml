@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        tools:ignore="RtlSymmetry"
+        android:background="@color/main"
+        android:layout_height="50dp"
+        android:paddingHorizontal="@dimen/big_margin">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_width="match_parent"
+            android:text="Добавить ингредиент"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <RelativeLayout
+            android:padding="@dimen/big_margin"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_rounded"
+            >
+            <ImageView
+                android:id="@+id/new_part_image"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/empty"
+               />
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:maxLines="4"
+            android:id="@+id/new_part_title"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:hint="Новый ингредиент"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="В 100 граммах:"
+            android:textSize="15sp"
+            />
+
+        <LinearLayout
+            android:paddingHorizontal="@dimen/big_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginEnd="@dimen/big_margin"
+                android:background="@drawable/border_rounded"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Калории"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <EditText
+                    android:id="@+id/new_part_caloriew"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="20sp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/border_rounded"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Жиры"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <EditText
+                    android:id="@+id/new_part_fats"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="20sp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingHorizontal="@dimen/big_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginEnd="@dimen/big_margin"
+                android:background="@drawable/border_rounded"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Белки"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <EditText
+                    android:id="@+id/new_part_proteins"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="20sp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/border_rounded"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Углеводы"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <EditText
+                    android:id="@+id/new_part_carbohydrates"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="20sp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical"
+
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/chooseSaveBtn"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main"
+                android:text="@string/save_button"
+                android:onClick="onSaveBtnClick"/>
+
+            <Button
+                android:id="@+id/chooseCancelBtn"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/secondary"
+                android:text="@string/cancel_button"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

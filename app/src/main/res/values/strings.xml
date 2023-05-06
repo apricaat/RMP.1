@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">meal-builder</string>
+    <string name="choose_button">Составить трапезу</string>
+    <string name="user_meals_title">Ваши трапезы</string>
+    <string name="calories_counter">Калории: </string>
+    <string name="fat_counter">Ж: </string>
+    <string name="protein_counter">Б: </string>
+    <string name="carbonhydrates_counter">У: </string>
+    <string name="meal_edit_title">Редактировать трапезу</string>
+    <string name="save_button">Сохранить</string>
+    <string name="cancel_button">Отмена</string>
+    <string name="plan_button">План</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="plan_channel">Plan channel</string>
+    <string name="plan_channel_description">Channel for planned meals</string>
+    <string name="plan_notification_title">Время есть </string>
+    <string name="plan_notification_text">На это время вы запланировали </string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Войти или создать аккаунт</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="last_login_date_key">last_login_date</string>
+    <string name="logins_filename">logged.log</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragments">
+    <fragment
+        android:id="@+id/loginFragments"
+        android:name="com.example.meal_builder.ui.view.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_meals"
+            app:destination="@+id/mealsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealsFragment"
+        android:name="com.example.meal_builder.ui.view.MealsFragment"
+        android:label="Meals"
+        tools:layout="@layout/fragment_meals">
+        <action
+            android:id="@+id/action_meals_to_login"
+            app:destination="@+id/loginFragments" />
+        <action
+            android:id="@+id/action_meals_to_edit"
+            app:destination="@+id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.meal_builder.ui.view.EditMealFragment"
+        android:label="EditMeal"
+        tools:layout="@layout/fragment_edit_meal">
+        <action
+            android:id="@+id/action_edit_to_choose"
+            app:destination="@+id/choosePartsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choosePartsFragment"
+        android:name="com.example.meal_builder.ui.view.ChoosePartsFragment"
+        android:label="ChooseParts"
+        tools:layout="@layout/fragment_choose_parts">
+        <action
+            android:id="@+id/action_choose_to_add_parts"
+            app:destination="@+id/add_part_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_part_fragment"
+        android:name="com.example.meal_builder.ui.view.AddMealPartFragment"
+        android:label="AddPart"
+        tools:layout="@layout/fragment_add_meal_part" />
+
+</navigation>
