@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.example.meal_builder.data.DB;
 import com.example.meal_builder.data.Mapper;
 import com.example.meal_builder.data.data_sources.UserMealDAO;
-import com.example.meal_builder.data.user_sources.UserMealWithParts;
+import com.example.meal_builder.data.entities.UserMealWithParts;
 import com.example.meal_builder.data.model.UserMeal;
 
 import java.util.ArrayList;
@@ -20,8 +20,8 @@ public class MealsRepository {
     private MutableLiveData<List<UserMeal>> userMeals = new MutableLiveData<>(new ArrayList<>());
 
     public MealsRepository(Application app) {
-        DB mar_Thu_Apr_27 = DB.getDatabase(app);
-        userMealDAO = mar_Thu_Apr_27.userMealDAO();
+        DB db = DB.getDatabase(app);
+        userMealDAO = db.userMealDAO();
     }
 
     public MutableLiveData<List<UserMeal>> getMeals() {
@@ -35,7 +35,7 @@ public class MealsRepository {
 
     public void addEmptyMeal() {
         DB.databaseWriteExecutor.execute(() -> {
-            UserMealWithParts meal = userMealDAO.insert(new com.example.meal_builder.data.user_sources.UserMeal());
+            UserMealWithParts meal = userMealDAO.insert(new com.example.meal_builder.data.entities.UserMeal());
             userMeals.getValue().add(Mapper.adaptUserMealToClient(meal));
             userMeals.postValue(userMeals.getValue());
         });

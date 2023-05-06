@@ -1,5 +1,7 @@
 package com.example.meal_builder.data.data_sources;
 
+import android.util.Log;
+
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
@@ -8,8 +10,8 @@ import androidx.room.Transaction;
 import androidx.room.Update;
 
 import com.example.meal_builder.data.entities.MealPartCrossRef;
-import com.example.meal_builder.data.user_sources.UserMeal;
-import com.example.meal_builder.data.user_sources.UserMealWithParts;
+import com.example.meal_builder.data.entities.UserMeal;
+import com.example.meal_builder.data.entities.UserMealWithParts;
 import com.example.meal_builder.data.model.MealPart;
 
 import java.util.List;

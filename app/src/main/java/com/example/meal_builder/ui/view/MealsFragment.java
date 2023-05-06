@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.meal_builder.ui.viewmodels.MealsViewModel;
 import com.example.meal_builder.R;
-import com.example.meal_builder.data.user_sources.UserMealsAdapter;
+import com.example.meal_builder.ui.adapters.UserMealsAdapter;
 import com.example.meal_builder.ui.viewmodels.LoginViewModel;
 
 public class MealsFragment extends Fragment {
